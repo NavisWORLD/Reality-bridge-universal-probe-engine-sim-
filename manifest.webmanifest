@@ -1,0 +1,12 @@
+{
+  "name": "Reality Bridge Universe Engine",
+  "short_name": "RealityBridge",
+  "description": "Reality Bridge universal probe, digital twin, blueprint lab and universe simulation engine.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#02070b",
+  "theme_color": "#02070b",
+  "orientation": "any",
+  "icons": [{"src":"icons/reality-bridge.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
