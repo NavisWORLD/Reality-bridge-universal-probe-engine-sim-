@@ -6,8 +6,8 @@
 #include <BH1750.h>
 #include <Adafruit_BME280.h>
 #include <Adafruit_ICM42688.h>
-#include <SparkFun_MAX3010x.h>
-#include <TinyGPSPlus.h>
+#include <MAX30105.h>
+#include <TinyGPS++.h>
 #include "driver/i2s.h"
 
 // Reality Bridge Probe v0.2 reference firmware
