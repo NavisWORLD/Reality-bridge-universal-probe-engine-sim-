@@ -1,0 +1,30 @@
+name: Bootstrap and dispatch full Reality Bridge release
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/bootstrap-release-v2.yml']
+permissions:
+  contents: write
+  actions: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Attach verified release tree and dispatch builders
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TARGET_TREE: 91c7ca17bfdfd1c87ad5b00e33b2ed86277ae01e
+        run: |
+          set -euo pipefail
+          parent="$(git rev-parse HEAD)"
+          payload="$(jq -n --arg message 'Publish full Reality Bridge Universe Engine v0.1.0' --arg tree "$TARGET_TREE" --arg parent "$parent" '{message:$message,tree:$tree,parents:[$parent]}')"
+          commit="$(printf '%s' "$payload" | gh api --method POST "repos/$GITHUB_REPOSITORY/git/commits" --input - --jq .sha)"
+          echo "publication commit: $commit"
+          gh api --method PATCH "repos/$GITHUB_REPOSITORY/git/refs/heads/main" -f sha="$commit" -F force=false
+          sleep 3
+          gh workflow run release.yml --ref main
+          gh workflow run materialize.yml --ref main
+          gh workflow run pages.yml --ref main || true
