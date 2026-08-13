@@ -142,7 +142,7 @@ jobs:
           npx cap sync ios
           xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Release -sdk iphonesimulator -derivedDataPath build CODE_SIGNING_ALLOWED=NO
           cd build/Build/Products/Release-iphonesimulator
-          ditto -c -k --sequesterRsrc --keepParent App.app ../../../../../Reality-Bridge-Universe-v0.1.0-iOS-Simulator.app.zip
+          ditto -c -k --sequesterRsrc --keepParent App.app ../../../../Reality-Bridge-Universe-v0.1.0-iOS-Simulator.app.zip
       - uses: actions/upload-artifact@v4
         with:
           name: ios-simulator
