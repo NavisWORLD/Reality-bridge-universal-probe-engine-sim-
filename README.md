@@ -10,12 +10,25 @@ This repository is the public full-disclosure engineering home for the Reality B
 - **Working single-file Universe Engine:** [`REALITY_BRIDGE_UNIVERSE_ENGINE_ULTIMATE.html`](REALITY_BRIDGE_UNIVERSE_ENGINE_ULTIMATE.html)
 - **Interactive Reality Bridge device digital twin:** [`hardware/REALITY_BRIDGE_PROBE_DIGITAL_TWIN_ENGINE.html`](hardware/REALITY_BRIDGE_PROBE_DIGITAL_TWIN_ENGINE.html)
 - **Interactive fabrication blueprint lab:** [`hardware/blueprints/REALITY_BRIDGE_DEVICE_BLUEPRINT.html`](hardware/blueprints/REALITY_BRIDGE_DEVICE_BLUEPRINT.html)
+- **Full original 96,939-byte Ultimate engine archive:** [`archive/full-ultimate-engine/`](archive/full-ultimate-engine/)
 
-The visual files are ordinary self-contained HTML/CSS/JavaScript and require no framework just to open.
+The main visual files are ordinary self-contained HTML/CSS/JavaScript and require no framework just to open.
 
-## What the HTML engine contains
+## Two preserved Universe Engine forms
 
-The repo-native engine includes deterministic procedural worlds, orbit and surface render modes, gravity-scaled movement, world folding, biosphere growth, life seeding, outposts, storms, anomalies, time warp, a live 54-channel computational state display, and an integrated Reality Bridge device mode with an explodable internal hardware model.
+### Repo-native playable edition
+
+`REALITY_BRIDGE_UNIVERSE_ENGINE_ULTIMATE.html` is intentionally compact enough to live directly in the repository as a normal source file. It includes deterministic procedural worlds, orbit and surface rendering, gravity-scaled movement, world folding, biosphere growth, life seeding, outposts, storms, anomalies, time warp, a 54-channel computational state display, and an integrated Reality Bridge device mode with explodable internals.
+
+### Full experimental Ultimate ancestry
+
+The larger source created during the original build session is preserved losslessly under `archive/full-ultimate-engine/` as gzip+base64 parts. Reconstruct it with:
+
+```bash
+python archive/full-ultimate-engine/materialize.py
+```
+
+The materializer verifies the exact expected SHA-256 before writing the 96,939-byte HTML file. CI reconstructs and JavaScript-checks this full version as part of every push.
 
 ## Reality Bridge Probe v0.1
 
@@ -34,6 +47,16 @@ Reference modules:
 - optional GNSS UART module
 
 The exact breakout dimensions and electrical properties of purchased modules must be checked before fabrication.
+
+## Buildable layers
+
+- `hardware/` — device twin, blueprint HTML, BOM, pin map, wiring, CAD and ESP32 firmware
+- `native/` — C++20 deterministic smoke engine and dependency-free Python live-data bridge
+- `packages/reality-bridge-core/` — reusable deterministic JavaScript/probe helpers and tests
+- `apps/desktop/` — Electron packaging scaffold for Windows/macOS/Linux
+- `apps/mobile/` — Capacitor packaging scaffold for Android/iOS
+- `docs/` — user, engineering, build, teacher, study and installation guides
+- `research/` — evidence labels, hypotheses and proposed tests
 
 ## Evidence labels
 
