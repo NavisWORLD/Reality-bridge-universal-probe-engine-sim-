@@ -1,0 +1,14 @@
+Connector,Pin,Net,Purpose
+J_I2C1/2,1,3V3,sensor power
+J_I2C1/2,2,GND,ground
+J_I2C1/2,3,GPIO8 / SDA,I2C data
+J_I2C1/2,4,GPIO9 / SCL,I2C clock
+J_MIC,1,3V3,INMP441 VDD
+J_MIC,2,GND,INMP441 GND and L/R LOW reference
+J_MIC,3,GPIO12 / BCLK,INMP441 SCK
+J_MIC,4,GPIO13 / WS,INMP441 WS
+J_MIC,5,GPIO14 / SD,INMP441 data to ESP32
+J_GNSS,1,3V3 or 5V per exact module,power
+J_GNSS,2,GND,ground
+J_GNSS,3,GPIO17 / RX,connect GNSS TX
+J_GNSS,4,GPIO18 / TX,connect GNSS RX
