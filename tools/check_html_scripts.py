@@ -10,6 +10,8 @@ FILES=[
     ROOT/'hardware/REALITY_BRIDGE_PROBE_DIGITAL_TWIN_ENGINE.html',
     ROOT/'hardware/blueprints/REALITY_BRIDGE_DEVICE_BLUEPRINT.html',
 ]
+full=ROOT/'archive/full-ultimate-engine/REALITY_BRIDGE_UNIVERSE_ENGINE_ULTIMATE_FULL.html'
+if full.exists(): FILES.append(full)
 
 for html in FILES:
     text=html.read_text(encoding='utf-8')
