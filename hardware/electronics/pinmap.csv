@@ -1,0 +1,10 @@
+Signal,ESP32-S3 GPIO,Destination,Notes
+I2C_SDA,8,ICM-42688/BH1750/BME280/MAX30102 SDA,Shared 3.3 V I2C
+I2C_SCL,9,ICM-42688/BH1750/BME280/MAX30102 SCL,Shared 3.3 V I2C
+I2S_BCLK,12,INMP441 SCK,Microphone clock
+I2S_WS,13,INMP441 WS,Word select
+I2S_SD,14,INMP441 SD,Microphone data
+GNSS_RX,17,GNSS TX,Optional UART
+GNSS_TX,18,GNSS RX,Optional UART
+3V3,3V3,Sensor power,Verify breakout requirements
+GND,GND,All grounds,Common ground
