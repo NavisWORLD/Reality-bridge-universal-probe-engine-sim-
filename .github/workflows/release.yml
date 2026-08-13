@@ -22,17 +22,15 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import shutil, zipfile
-          root=Path('.')
           out=Path('dist'); out.mkdir(exist_ok=True)
           shutil.copy2('REALITY_BRIDGE_UNIVERSE_ENGINE_ULTIMATE.html', out/'Reality-Bridge-Universe-Engine-v0.1.0.html')
           shutil.copy2('archive/full-ultimate-engine/REALITY_BRIDGE_UNIVERSE_ENGINE_ULTIMATE_FULL.html', out/'Reality-Bridge-Universe-Engine-FULL-v0.1.0.html')
           def bundle(name, paths):
               with zipfile.ZipFile(out/name,'w',zipfile.ZIP_DEFLATED) as z:
-                  for p in paths:
-                      p=Path(p)
+                  for p in map(Path,paths):
                       if p.is_dir():
                           for f in p.rglob('*'):
-                              if f.is_file(): z.write(f, f.as_posix())
+                              if f.is_file(): z.write(f,f.as_posix())
                       elif p.is_file(): z.write(p,p.as_posix())
           bundle('Reality-Bridge-PWA-v0.1.0.zip',['index.html','REALITY_BRIDGE_UNIVERSE_ENGINE_ULTIMATE.html','manifest.webmanifest','sw.js','icons','hardware'])
           bundle('Reality-Bridge-Hardware-CAD-v0.1.0.zip',['hardware','docs/DEVICE_BUILD_GUIDE.md','research/protocols/04_device_latency_accuracy.md'])
@@ -107,7 +105,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: {node-version: '22'}
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '21'
