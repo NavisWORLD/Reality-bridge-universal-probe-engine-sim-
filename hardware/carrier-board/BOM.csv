@@ -1,0 +1,12 @@
+Ref,Part,Qty,Function,Notes
+J_MCU,ESP32-S3 DevKitC-1 socket/header set,1,MCU carrier,verify exact row spacing before order
+J_I2C1,4-pin sensor connector,1,3V3 GND SDA SCL,select exact connector footprint
+J_I2C2,4-pin sensor connector,1,second I2C branch,optional
+J_MIC,5-pin sensor connector,1,3V3 GND BCLK WS SD,INMP441
+J_GNSS,4-pin connector,1,power GND TX RX,optional GNSS
+R1,4.7 kOhm 0603,1,SDA pull-up,DNP if breakout pull-ups sufficient
+R2,4.7 kOhm 0603,1,SCL pull-up,DNP if breakout pull-ups sufficient
+C1,100 nF 0603 X7R,1,local 3V3 decoupling,near sensor connectors
+C2,10 uF 0805/1206 X5R,1,3V3 bulk decoupling,near MCU/sensor rail
+TP1-TP9,test points,9,3V3 GND SDA SCL I2S UART,bring-up
+H1-H4,M3 NPTH mounting holes,4,mechanical,3.2 mm drill
