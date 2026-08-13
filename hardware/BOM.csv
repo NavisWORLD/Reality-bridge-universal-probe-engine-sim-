@@ -1,0 +1,10 @@
+ID,Part,Qty,Function,Status
+RB-001,ESP32-S3 DevKitC-1 or compatible,1,MCU/Wi-Fi/USB,Required
+RB-002,ICM-42688-P breakout,1,6-axis IMU,Required
+RB-003,BH1750 breakout,1,Ambient light,Required
+RB-004,BME280 breakout,1,Temperature humidity pressure,Required
+RB-005,MAX30102 breakout,1,Optical waveform,Optional non-medical
+RB-006,INMP441 breakout,1,I2S microphone,Required
+RB-007,NEO-M9N-class GNSS breakout,1,GNSS,Optional
+RB-008,M3 x 8 mm screws,8,Enclosure,Reference
+RB-009,USB-C data/power cable,1,Power/data,Required
