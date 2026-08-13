@@ -1,0 +1,17 @@
+{
+  "name": "reality-bridge-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.js",
+  "scripts": {"start": "electron .", "dist": "electron-builder --publish never"},
+  "devDependencies": {"electron": "^43.0.0", "electron-builder": "^26.0.0"},
+  "build": {
+    "appId": "world.navis.realitybridge",
+    "productName": "Reality Bridge Universe",
+    "files": ["main.js", "../../index.html", "../../REALITY_BRIDGE_UNIVERSE_ENGINE_ULTIMATE.html", "../../hardware/**/*"],
+    "directories": {"output": "dist"},
+    "linux": {"target": ["AppImage"]},
+    "win": {"target": ["nsis", "portable"]},
+    "mac": {"target": ["dmg", "zip"]}
+  }
+}
