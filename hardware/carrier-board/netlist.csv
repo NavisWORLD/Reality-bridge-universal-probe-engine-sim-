@@ -1,0 +1,11 @@
+Net,Purpose,Nodes
+3V3,regulated sensor rail,ESP32 3V3; J_I2C1.1; J_I2C2.1; J_MIC.1; R1.1; R2.1; C1.1; C2.1
+GND,common ground,ESP32 GND; all connector grounds; C1.2; C2.2
+SDA,I2C data,GPIO8; J_I2C1.3; J_I2C2.3; R1.2
+SCL,I2C clock,GPIO9; J_I2C1.4; J_I2C2.4; R2.2
+I2S_BCLK,microphone bit clock,GPIO12; J_MIC.3
+I2S_WS,microphone word select,GPIO13; J_MIC.4
+I2S_SD,microphone data,GPIO14; J_MIC.5
+GNSS_RX,ESP32 receive,GPIO17; J_GNSS.3 / GNSS TX
+GNSS_TX,ESP32 transmit,GPIO18; J_GNSS.4 / GNSS RX
+5V,optional module pass-through,ESP32 5V/VIN; optional GNSS input when module requires 5V
