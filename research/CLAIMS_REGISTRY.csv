@@ -1,0 +1,9 @@
+ID,Statement,Evidence label
+C-001,Single-file playable universe simulator exists,IMPLEMENTED
+C-002,Interactive Reality Bridge device digital twin exists,IMPLEMENTED
+C-003,Interactive fabrication blueprint HTML exists,IMPLEMENTED
+C-004,Reference probe hardware is physically validated,PROPOSED TEST — NOT YET RUN
+C-005,Optical waveform channel is medically accurate,NOT CLAIMED
+C-006,External astronomy/geophysics physically causes simulated anomalies,NOT CLAIMED
+C-007,Deterministic replay meets declared tolerance,PROPOSED TEST — NOT YET RUN
+C-008,Sensor state improves prediction beyond controls,PROPOSED TEST — NOT YET RUN
